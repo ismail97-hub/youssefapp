@@ -51,7 +51,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "motif TEXT," +
                 "prixc INTEGER," +
                 "matriculevt TEXT," +
-                "FOREIGN KEY(matriculev) REFERENCES voiture(matricule)) ");
+                "FOREIGN KEY(matriculevt) REFERENCES voiture(matricule)) ");
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.example.locationapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 
@@ -15,5 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnajt(View view) {
         DatabaseHelper.getInstance(getApplicationContext()).getWritableDatabase();
+
     }
+
+
+
+  
 }
