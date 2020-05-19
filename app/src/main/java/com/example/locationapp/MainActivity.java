@@ -17,38 +17,27 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     Spinner spinner;
-    private List<Voiture> voitures=new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        spinner=findViewById(R.id.spinner2);
+        DatabaseHelper databaseHelper = new DatabaseHelper(this);
+        ArrayList<String> listV = databaseHelper.getAllVoitures();
+        Spinner sp =(Spinner)findViewById(R.id.spinner2);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.spinnerlayout,R.id.txt1,listV);
+        sp.setAdapter(adapter);
 
-
-
-
-        SQLiteDatabase db=DatabaseHelper.getInstance(getApplicationContext()).getReadableDatabase();
-        Cursor cursor=db.rawQuery("SELECT * FROM voiture",null);
-        while (cursor.moveToNext())
-        {
-            Voiture voiture=new Voiture();
-           voiture.setMatricule(cursor.getInt(1));
-           voiture.setNom(cursor.getString(2));
-           voitures.add(voiture);
-        }
-         ArrayAdapter<Voiture>adapter=new ArrayAdapter<>(getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,voitures);
-        spinner.setAdapter(adapter);
     }
 
     public void btnajt(View view)
     {
-        DatabaseHelper.getInstance(getApplicationContext()).getWritableDatabase();
-
+        Intent intent=new Intent(this,ventecharge.class);
+        startActivity(intent);
     }
 
     public void navigation(View view) {
-        Intent intent = new Intent(this, ventecharge.class);
-        startActivity(intent);
+
     }
 }

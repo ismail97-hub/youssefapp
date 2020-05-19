@@ -1,8 +1,11 @@
 package com.example.locationapp;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
 
 import androidx.annotation.Nullable;
 
@@ -16,7 +19,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return instance;
     }
-    private DatabaseHelper(Context context) {
+    public DatabaseHelper(Context context) {
         super(context, "Location.db", null, 1);
     }
 
@@ -61,5 +64,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
              db.execSQL("DROP TABLE IF EXISTS vente");
              db.execSQL("DROP TABLE IF EXISTS charge");
              onCreate(db);
+    }
+    public ArrayList<String> getAllVoitures() {
+        ArrayList<String> list = new ArrayList<String>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        db.beginTransaction();
+        try {
+            String selectQuery = "SELECT * FROM voiture";
+            Cursor cursor = db.rawQuery(selectQuery, null);
+            if (cursor.getCount() > 0) {
+                while (cursor.moveToNext()) {
+                    String matricule = cursor.getString(cursor.getColumnIndex("matricule"));
+                    list.add(matricule);
+                }
+            }
+            db.setTransactionSuccessful();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            db.endTransaction();
+            db.close();
+        }
+        return list;
     }
 }
