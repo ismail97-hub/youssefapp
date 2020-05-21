@@ -4,26 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Charge"
-    android:background="@drawable/bg_login">
-
-
+    tools:context=".insertionvoiture"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textViewmatricule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date :" />
+            android:text="Matricule" />
 
         <EditText
-            android:id="@+id/editTextheurentre"
+            android:id="@+id/editTextmatricule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="60dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="date" />
@@ -33,13 +31,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
 
         <TextView
             android:id="@+id/textViewnom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Motif" />
+            android:text="nom" />
 
         <EditText
             android:id="@+id/editTextcin"
@@ -48,10 +47,9 @@
             android:layout_marginLeft="30dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="date" />
+            android:inputType="text" />
 
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,57 +57,38 @@
         android:baselineAligned="false">
 
         <TextView
-            android:id="@+id/textViewprenom"
+            android:id="@+id/textViewcolor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Prix" />
+            android:text="prenom" />
 
         <EditText
-            android:id="@+id/editTextdatesortie"
+            android:id="@+id/editTextcolor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
+            android:layout_marginLeft="30dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="date" />
+            android:inputType="text" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/btnenrg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:baselineAligned="false">
 
-        <TextView
-            android:id="@+id/textViewadress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total" />
-
-        <EditText
-            android:id="@+id/editTextdateso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="date" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/buttonenre"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sauvgarder"
-            android:textSize="36sp" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date"
+            android:onClick="insekjbkjbrer"
+            android:text="InsertionClient" />
     </LinearLayout>
-
-
 </LinearLayout>

@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.os.Bundle;
-import android.text.InputType;
-import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
@@ -23,7 +21,7 @@ public class vente extends AppCompatActivity {
         setContentView(R.layout.activity_vente);
 
 
-        date = findViewById(R.id.editText3);
+        date = findViewById(R.id.editTextmatriculev);
 
     }
 

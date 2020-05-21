@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".vente"
-    android:background="@drawable/bg_login">
-
+    tools:context=".insertionclient">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +15,7 @@
             android:id="@+id/textViewcin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date sortie       " />
+            android:text="@string/common_google_play_services_install_button" />
 
         <EditText
             android:id="@+id/editTextmatriculev"
@@ -40,7 +38,7 @@
             android:id="@+id/textViewnom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DateEntre" />
+            android:text="nom" />
 
         <EditText
             android:id="@+id/editTextcin"
@@ -49,7 +47,7 @@
             android:layout_marginLeft="60dp"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="date"/>
+            android:inputType="date" />
 
     </LinearLayout>
 
@@ -63,7 +61,7 @@
             android:id="@+id/textViewprenom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Prix                     " />
+            android:text="prenom" />
 
         <EditText
             android:id="@+id/editTextdatesortie"
@@ -86,7 +84,7 @@
             android:id="@+id/textViewadress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nbrjours            " />
+            android:text="adress" />
 
         <EditText
             android:id="@+id/editTextdateso"
@@ -109,7 +107,7 @@
             android:id="@+id/textViewtele"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Montant payee" />
+            android:text="telephone" />
 
         <EditText
             android:id="@+id/editTextheurs"
@@ -121,41 +119,26 @@
             android:inputType="date" />
 
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:baselineAligned="false">
 
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Montant credit" />
-
-        <EditText
-            android:id="@+id/editText8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="date" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/buttonenre"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sauvgarder" />
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date"
+            android:onClick="inserer"
+            android:text="InsertionClient" />
+
+
+
     </LinearLayout>
+
 
 </LinearLayout>
