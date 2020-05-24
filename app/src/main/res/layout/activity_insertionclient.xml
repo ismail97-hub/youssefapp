@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".insertionclient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewcin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/common_google_play_services_install_button" />
+
+        <EditText
+            android:id="@+id/editTextmatriculev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/textViewnom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nom" />
+
+        <EditText
+            android:id="@+id/editTextcin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/textViewprenom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="prenom" />
+
+        <EditText
+            android:id="@+id/editTextdatesortie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/textViewadress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adress" />
+
+        <EditText
+            android:id="@+id/editTextdateso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/textViewtele"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="telephone" />
+
+        <EditText
+            android:id="@+id/editTextheurs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:baselineAligned="false">
+
+
+        <Button
+            android:id="@+id/buttonenre"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="date"
+            android:onClick="inserer"
+            android:text="InsertionClient" />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

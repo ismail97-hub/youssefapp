@@ -9,16 +9,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ClientRech"></activity>
-        <activity android:name=".SaisieVente" />
-        <activity android:name=".VenteMaj" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".insertionvente"> <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter></activity>
+        <activity android:name=".Listedesvente"></activity>
+        <activity android:name=".insertionvoiture">
+
         </activity>
+        <activity android:name=".insertionclient" />
+        <activity android:name=".manuprincipal" />
+        <activity android:name=".listeVente" />
+        <activity
+            android:name=".Historique"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Charge"
+            android:parentActivityName=".ventecharge" />
+        <activity
+            android:name=".vente"
+            android:parentActivityName=".ventecharge" />
+        <activity
+            android:name=".ventecharge"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
